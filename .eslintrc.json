@@ -7,6 +7,9 @@
   "extends": [
     "airbnb",
     "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
@@ -15,9 +18,11 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/ban-ts-ignore": "off",
     "jsx-a11y/label-has-associated-control": [
@@ -30,7 +35,36 @@
         "depth": 25
       }
     ],
-    "@typescript-eslint/no-explicit-any": "off"
+    // https://github.com/vercel/next.js/issues/5533
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    // https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
-  "settings": { "react": { "version": "detect" } }
+  "settings": {
+    "react": { "version": "detect" },
+    // https://github.com/vercel/next.js/issues/8342
+    "import/resolver": {
+      "alias": {
+        "map": [["~", "./src"]],
+        "extensions": [".ts", ".js", ".tsx", ".json"]
+      }
+    }
+  }
 }
