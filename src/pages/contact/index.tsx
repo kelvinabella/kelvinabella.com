@@ -25,19 +25,22 @@ export default function Contact() {
         </Hero>
         <ContactWrapper>
           <Contacts>
-            <a href="mailto:abellakelvin.ka@gmail.com">
+            <a aria-label="Email To" href="mailto:abellakelvin.ka@gmail.com">
               <span>
                 <GmailSVG />
               </span>
               <span>abellakelvin.ka@gmail.com</span>
             </a>
-            <a href="https://www.linkedin.com/in/kelvinabella">
+            <a
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/kelvinabella"
+            >
               <span>
                 <LinkedinSVG />
               </span>
               <span>Kelvin Abella</span>
             </a>
-            <a href="https://github.com/kelvinabella">
+            <a aria-label="Github" href="https://github.com/kelvinabella">
               <span>
                 <GithubSVG />
               </span>

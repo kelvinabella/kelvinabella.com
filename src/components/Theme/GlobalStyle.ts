@@ -60,6 +60,40 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     margin: 0;
   }
 
+  @font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Caveat Regular'), local('Caveat-Regular'),
+        url('../fonts/caveat-v7-latin-regular.woff2') format('woff2'),
+        url('../fonts/caveat-v7-latin-regular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Caveat Bold'), local('Caveat-Bold'),
+        url('../fonts/caveat-v7-latin-700.woff2') format('woff2'),
+        url('../fonts/caveat-v7-latin-700.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/fira-code-v9-latin-500.woff2') format('woff2'),
+        url('../fonts/fira-code-v9-latin-500.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'),
+        url('../fonts/lato-v16-latin-regular.woff2') format('woff2'),
+        url('../fonts/lato-v16-latin-regular.woff') format('woff');
+  }
 `;
 
 export default GlobalStyle;

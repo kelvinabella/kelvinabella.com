@@ -6,6 +6,7 @@ export const Apps = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  ${({ theme }) => theme.tablet`margin-top: 0;`}
 `;
 
 export const AppCard = styled.div`

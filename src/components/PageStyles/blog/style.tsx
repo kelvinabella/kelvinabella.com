@@ -15,7 +15,7 @@ export const Hero = styled.div`
     width: auto;
   }
 
-  ${({ theme }) => theme.tablet`width: 100%;margin-top: 1em;`}
+  ${({ theme }) => theme.tablet`width: 100%;margin-top: 0;`}
 `;
 
 export const Posts = styled.div`

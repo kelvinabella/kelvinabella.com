@@ -21,6 +21,7 @@ export const Hero = styled.div`
     font-size: 2em;
     margin-bottom: 10px;
   }
+  ${({ theme }) => theme.tablet`margin-top: 2em;`}
 
   a {
     color: #63d2ff;

@@ -23,7 +23,7 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  ${({ theme }) => theme.tablet` margin-top: 0;`}
   & > div {
     position: relative;
     width: 180px;

@@ -41,13 +41,16 @@ export default function Home() {
           </Link>
         </CallToAction>
         <Contact>
-          <a href="https://github.com/kelvinabella">
+          <a aria-label="Github" href="https://github.com/kelvinabella">
             <GithubSVG />
           </a>
-          <a href="https://www.linkedin.com/in/kelvinabella">
+          <a
+            aria-label="LinkedIn"
+            href="https://www.linkedin.com/in/kelvinabella"
+          >
             <LinkedinSVG />
           </a>
-          <a href="mailto:abellakelvin.ka@gmail.com">
+          <a aria-label="Email To" href="mailto:abellakelvin.ka@gmail.com">
             <GmailSVG />
           </a>
         </Contact>

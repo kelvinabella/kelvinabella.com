@@ -23,7 +23,6 @@ const MainHead = ({ siteTitle = config.title }: { siteTitle?: string }) => (
     <meta name="keywords" content={config.keywords} />
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
-    <meta name="google" content="nositelinkssearchbox" />
     <meta name="google" content="notranslate" />
     <meta name="google-site-verification" content={config.googleVerification} />
     <meta name="generator" content="Node" />
@@ -63,10 +62,6 @@ const MainHead = ({ siteTitle = config.title }: { siteTitle?: string }) => (
     <meta itemProp="image" content={config.image} />
 
     {/* TODO: Add adidtional missing tags and image. */}
-
-    <link href={config.googleFonts.caveat} rel="stylesheet" />
-    <link href={config.googleFonts.lato} rel="stylesheet" />
-    <link href={config.googleFonts.firaCode} rel="stylesheet" />
   </Head>
 );
 

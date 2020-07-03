@@ -41,13 +41,6 @@ const site = {
     favicon196: "/images/favicons/favicon-196x196.png",
     appleTouch152: "/images/favicons/apple-touch-icon-152x152.png",
   },
-  googleFonts: {
-    caveat:
-      "https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap",
-    lato: "https://fonts.googleapis.com/css2?family=Lato&display=swap",
-    firaCode:
-      "https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap",
-  },
   colors: {
     green: "#64ffda",
     navy: "#0a192f",

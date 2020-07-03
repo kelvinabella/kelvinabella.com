@@ -11,7 +11,7 @@ const FooterContainer = styled.footer`
   color: #000;
   a {
     text-decoration: underline;
-    color: #fe6056;
+    color: #232946;
   }
   ${({ theme }) => theme.thone`font-size: 0.7em;`}
 `;

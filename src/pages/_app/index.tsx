@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     if (isShowLoader) {
       // eslint-disable-next-line no-console
       console.log(
-        "%cHi Welcome to my project. This codebase is also available at github. Link here https://github.com/kelvinabella.",
+        "%cHi Welcome to my project. This codebase is also available at Github. Link here https://github.com/kelvinabella/kelvs.me.",
         style.join(";")
       );
     }
