@@ -7,14 +7,20 @@ import config from "~/helpers/config";
 const MainHead = ({ siteTitle = config.title }: { siteTitle?: string }) => (
   <Head>
     <meta charSet="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
     <title>{siteTitle}</title>
 
     {/* <base href={config.url} /> */}
     {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" /> */}
-
+    <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#00214d" />
     <meta name="description" content={config.description} />
+    <meta name="keywords" content={config.keywords} />
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
     <meta name="google" content="nositelinkssearchbox" />

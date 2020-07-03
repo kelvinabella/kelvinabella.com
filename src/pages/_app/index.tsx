@@ -9,8 +9,23 @@ import Theme from "~/components/Theme";
 const App = ({ Component, pageProps }: AppProps) => {
   const [isShowLoader, setShowLoader] = useState(true);
   const hideLoader = () => setShowLoader(false);
+  const style = [
+    "color: #ffffff",
+    "background: #c73433",
+    "font-size: 1em",
+    "border: 1px solid #ffffff",
+    "padding: 5px",
+    "font-family: Fira Code",
+  ];
 
   useEffect(() => {
+    if (isShowLoader) {
+      // eslint-disable-next-line no-console
+      console.log(
+        "%cHi Welcome to my project. This codebase is also available at github. Link here https://github.com/kelvinabella.",
+        style.join(";")
+      );
+    }
     Router.events.on("routeChangeStart", () => hideLoader);
     Router.events.on("routeChangeComplete", () => hideLoader);
     return () => {
