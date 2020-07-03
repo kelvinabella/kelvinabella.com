@@ -1,130 +1,67 @@
-/* eslint-disable react/require-default-props */
-import React from "react";
 import Head from "next/head";
+import config from "~/helpers/config";
 
-// import ogImage from "@images/og.png";
-
-import siteConfig from "../../helpers/config";
-
-const HeadLayout = ({
-  siteTitle = siteConfig.siteTitle,
-}: {
-  siteTitle?: string;
-}) => (
+// https://github.com/joshbuchea/HEAD
+// TODO: Check this warning
+// eslint-disable-next-line react/require-default-props
+const MainHead = ({ siteTitle = config.title }: { siteTitle?: string }) => (
   <Head>
-    <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
-    <link rel="canonical" href="https://kelvs.me" />
-
     <meta charSet="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>{siteTitle}</title>
 
-    <title itemProp="name" lang="en">
-      {siteTitle}
-    </title>
+    {/* <base href={config.url} /> */}
+    {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" /> */}
 
-    <meta name="description" content={siteConfig.siteDescription} />
-    <meta name="keywords" content={siteConfig.siteKeywords} />
-    <meta property="og:title" content={siteConfig.siteTitle} />
-    <meta property="og:description" content={siteConfig.siteDescription} />
+    <meta name="theme-color" content="#00214d" />
+    <meta name="description" content={config.description} />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+    <meta name="google-site-verification" content={config.googleVerification} />
+    <meta name="generator" content="Node" />
+    <meta name="referrer" content="no-referrer" />
+
+    <link rel="icon" sizes="192x192" href={config.icons.favicon196} />
+    <link rel="apple-touch-icon" href={config.icons.appleTouch152} />
+    <link rel="mask-icon" href={config.icons.appleTouch152} color="blue" />
+
+    {/* FB */}
+    <meta property="fb:app_id" content="" />
+    <meta property="og:url" content={config.url} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteConfig.siteUrl} />
-    <meta property="og:site_name" content={siteConfig.siteTitle} />
-    {/* <meta property="og:image" content={`${siteConfig.siteUrl}${ogImage}`} /> */}
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:locale" content={siteConfig.siteLanguage} />
-    <meta itemProp="name" content={siteConfig.siteTitle} />
-    <meta itemProp="description" content={siteConfig.siteDescription} />
-    {/* <meta itemProp="image" content={`${siteConfig.siteUrl}${ogImage}`} /> */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={siteConfig.siteUrl} />
-    <meta name="twitter:site" content={siteConfig.twitterHandle} />
-    <meta name="twitter:creator" content={siteConfig.twitterHandle} />
-    <meta name="twitter:title" content={siteConfig.siteTitle} />
-    <meta name="twitter:description" content={siteConfig.siteDescription} />
-    {/* <meta name="twitter:image" content={`${siteConfig.siteUrl}${ogImage}`} /> */}
-    <meta name="twitter:image:alt" content={siteConfig.siteTitle} />
-    <meta name="msapplication-TileColor" content={siteConfig.colors.navy} />
-    <meta
-      name="msapplication-TileImage"
-      content="/images/favicons/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content={siteConfig.colors.navy} />
-    {/* move this to a config then map it using array */}
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/images/favicons/apple-touch-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/images/favicons/apple-touch-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/images/favicons/apple-touch-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/images/favicons/apple-touch-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/images/favicons/apple-touch-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/images/favicons/apple-touch-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/images/favicons/apple-touch-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/images/favicons/apple-touch-icon-152x152.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/favicons/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/images/favicons/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="196x196"
-      href="/images/favicons/favicon-196x196.png"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <meta property="og:title" content={config.title} />
+    <meta property="og:image" content={config.image} />
+    <meta property="og:image:alt" content={config.title} />
+    <meta property="og:description" content={config.description} />
+    <meta property="og:site_name" content={config.title} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content={config.name} />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content={config.twitterHandle} />
+    <meta name="twitter:creator" content={config.twitterHandle} />
+    <meta name="twitter:url" content={config.url} />
+    <meta name="twitter:title" content={config.title} />
+    <meta name="twitter:description" content={config.description} />
+    <meta name="twitter:image" content={config.image} />
+    <meta name="twitter:image:alt" content={config.title} />
+
+    {/* Schema.org */}
+    <link rel="author" href={config.url} />
+    <link rel="publisher" href={config.url} />
+    <meta itemProp="name" content={config.title} />
+    <meta itemProp="description" content={config.description} />
+    <meta itemProp="image" content={config.image} />
+
+    {/* TODO: Add adidtional missing tags and image. */}
+
+    <link href={config.googleFonts.caveat} rel="stylesheet" />
+    <link href={config.googleFonts.lato} rel="stylesheet" />
+    <link href={config.googleFonts.firaCode} rel="stylesheet" />
   </Head>
 );
 
-export default HeadLayout;
+export default MainHead;

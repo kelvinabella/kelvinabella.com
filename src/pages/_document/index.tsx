@@ -8,7 +8,7 @@ import Document, {
 import { ServerStyleSheet } from "styled-components";
 import Terser from "terser";
 import mem from "mem";
-import code from "../../helpers/noflash";
+import code from "~/helpers/noflash";
 
 const minify = mem(Terser.minify);
 // https://github.com/kachkaev/njt/commit/1ef3bb026b006a355173c8a55594de65de53c102
@@ -55,7 +55,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en" itemScope itemType="https://schema.org/Article">
         <Head />
         <body>
           <noscript>

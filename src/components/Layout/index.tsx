@@ -1,7 +1,5 @@
-import React from "react";
-import HeadLayout from "../Head";
-import NavBar from "../Navbar";
-// import styled from "styled-components";
+import MainHead from "../Head";
+import Navbar from "../Navbar";
 import Footer from "../Footer";
 
 type Props = {
@@ -12,8 +10,8 @@ type Props = {
 export default function Layout({ children, siteTitle }: Props) {
   return (
     <>
-      <HeadLayout siteTitle={siteTitle} />
-      <NavBar />
+      <MainHead siteTitle={siteTitle} />
+      <Navbar />
       {children}
       <Footer />
     </>

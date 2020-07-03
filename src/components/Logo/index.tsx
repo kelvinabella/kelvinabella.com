@@ -1,27 +1,8 @@
-import styled from "styled-components";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import anime from "animejs";
-import React, { useState, useEffect } from "react";
 import LogoSVG from "~/components/Icons/Logo";
-
-const StyledLogo = styled.div`
-  display: flex;
-  z-index: 20;
-  justify-content: center;
-  align-items: center;
-  justify-self: flex-start;
-  svg {
-    display: block;
-    height: 1.5em;
-    width: auto;
-  }
-  ${({ theme }) => theme.tablet`
-    justify-content: flex-start;
-    a {
-      padding-left: 1em;
-    }
-  `}
-`;
+import LogoContainer from "./style";
 
 export default function Logo() {
   const [isFinished, setFinished] = useState(false);
@@ -53,12 +34,12 @@ export default function Logo() {
   }, []);
 
   return (
-    <StyledLogo>
+    <LogoContainer>
       <Link href="/">
         <a onMouseEnter={() => animate()}>
           <LogoSVG />
         </a>
       </Link>
-    </StyledLogo>
+    </LogoContainer>
   );
 }

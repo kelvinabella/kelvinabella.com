@@ -1,27 +1,9 @@
-import styled from "styled-components";
-
-const StyleFooter = styled.footer`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 3em;
-  font-size: 12px;
-  text-align: center;
-  color: #999;
-
-  a {
-    text-decoration: underline;
-    color: #8ccbff;
-  }
-
-  ${({ theme }) => theme.thone`font-size: 0.7em;`}
-`;
+import FooterContainer from "./style";
 
 export default function Footer() {
   return (
-    <StyleFooter>
-      <span>
+    <FooterContainer>
+      <div>
         <span>
           powered by&nbsp;
           <a href="https://nextjs.org">Next.js</a>
@@ -33,7 +15,7 @@ export default function Footer() {
           <a href="https://kelvs.me">Kelvin Abella</a>
           &nbsp;with &hearts;
         </span>
-      </span>
-    </StyleFooter>
+      </div>
+    </FooterContainer>
   );
 }

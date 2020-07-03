@@ -1,7 +1,7 @@
 import React from "react";
 
 const Hamburger = () => (
-  <svg viewBox="0 0 100 100" width="80">
+  <svg viewBox="10 10 70 70" width="35" height="35">
     <path
       className="line top"
       d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"

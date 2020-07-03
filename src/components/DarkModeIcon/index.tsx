@@ -1,35 +1,10 @@
 import useDarkMode from "use-dark-mode";
-import styled from "styled-components";
-// import anime from "animejs";
-import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
-import MoonSVG from "~/components/Icons/Moon";
+import { useState, useEffect } from "react";
+import { useSpring } from "react-spring";
 import SunSVG from "~/components/Icons/Sun";
+import MoonSVG from "~/components/Icons/Moon";
 import { useLoaded } from "~/helpers/index";
-
-const StyledIcon = styled(animated.div)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-self: flex-end;
-  span {
-    display: inherit;
-  }
-  svg {
-    height: 1.5em;
-    width: auto;
-    cursor: pointer;
-    fill: ${props => props.theme.text.dark};
-    .dark-mode & {
-      fill: ${props => props.theme.text.light};
-    }
-  }
-
-  ${({ theme }) => theme.tablet` 
-    margin: 0 0 15% 15%;
-    display:none;
-  `}
-`;
+import { IconContainer, AnimatedSpan } from "./style";
 
 export default function DarkModeIcon() {
   const darkMode = useDarkMode(false);
@@ -40,22 +15,8 @@ export default function DarkModeIcon() {
     transform: isDarkMode ? "rotate(0deg)" : "rotate(90deg)",
   });
 
-  // const animate = () => {
-  //   const animateLoader = anime.timeline({
-  //     easing: "easeInOutCubic",
-  //     duration: 1000,
-  //   });
-
-  //   animateLoader.add({
-  //     targets: ".sun path",
-  //     direction: "normal",
-  //     strokeDashoffset: [anime.setDashoffset, 0],
-  //   });
-  // };
-
   const toggleDarkMode = (value: boolean) => {
     if (value) {
-      // animate();
       darkMode.enable();
     } else {
       darkMode.disable();
@@ -76,31 +37,20 @@ export default function DarkModeIcon() {
       }
     };
     window.addEventListener("storage", handler);
-
     return () => window.removeEventListener("storage", handler);
   }, []);
 
   return (
-    <StyledIcon style={svgSpring}>
-      {isDarkMode && loaded ? (
-        <span
-          role="button"
-          tabIndex={0}
-          onClick={() => toggleDarkMode(false)}
-          onKeyPress={() => toggleDarkMode(false)}
-        >
-          <MoonSVG />
-        </span>
-      ) : (
-        <span
-          role="button"
-          tabIndex={0}
-          onClick={() => toggleDarkMode(true)}
-          onKeyPress={() => toggleDarkMode(false)}
-        >
-          <SunSVG />
-        </span>
-      )}
-    </StyledIcon>
+    <IconContainer>
+      <AnimatedSpan
+        style={svgSpring}
+        role="button"
+        tabIndex={0}
+        onClick={() => toggleDarkMode(!isDarkMode)}
+        onKeyPress={() => toggleDarkMode(!isDarkMode)}
+      >
+        {isDarkMode && loaded ? <MoonSVG /> : <SunSVG />}
+      </AnimatedSpan>
+    </IconContainer>
   );
 }
