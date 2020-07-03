@@ -4,8 +4,14 @@ import Layout from "~/components/Layout";
 import GmailSVG from "~/components/Icons/Gmail";
 import GithubSVG from "~/components/Icons/Github";
 import LinkedinSVG from "~/components/Icons/LinkedIn";
-import { Container, HorizontalBar } from "~/components/Styles";
-import { HeroWrapper, HeroOne, HeroTwo, CallToAction, Contact } from "./style";
+import { Container, HorizontalBar } from "~/components/PageStyles/common/style";
+import {
+  HeroWrapper,
+  HeroOne,
+  HeroTwo,
+  CallToAction,
+  Contact,
+} from "~/components/PageStyles/index/style";
 
 // https://www.justinewargnier.com/
 // https://simpleicons.org/

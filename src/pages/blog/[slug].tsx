@@ -2,8 +2,8 @@
 import Layout from "~/components/Layout";
 import markdownToHtml from "~/helpers/markdown-to-html";
 import { getPostBySlug, getAllPosts } from "~/helpers/api";
-import { Container } from "~/components/Styles";
-import { PostContainer } from "./style";
+import { Container } from "~/components/PageStyles/common/style";
+import { PostContainer } from "~/components/PageStyles/blog/style";
 
 type Params = {
   params: {

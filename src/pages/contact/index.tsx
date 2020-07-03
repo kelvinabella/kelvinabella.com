@@ -3,8 +3,12 @@ import GithubSVG from "~/components/Icons/Github";
 import GmailSVG from "~/components/Icons/Gmail";
 import ContactSVG from "~/components/Icons/Contact";
 import LinkedinSVG from "~/components/Icons/LinkedIn";
-import { Container } from "~/components/Styles";
-import { Hero, ContactWrapper, Contacts } from "./style";
+import { Container } from "~/components/PageStyles/common/style";
+import {
+  Hero,
+  ContactWrapper,
+  Contacts,
+} from "~/components/PageStyles/contact/style";
 
 // https://deab.ru/#contacts
 export default function Contact() {

@@ -5,8 +5,13 @@ import { InferGetStaticPropsType } from "next";
 import Layout from "~/components/Layout";
 import GithubSVG from "~/components/Icons/Github";
 import OpenLinkSVG from "~/components/Icons/OpenLink";
-import { Apps, AppCard, AppDetails, AppLinks } from "./styles";
-import { Container, HorizontalBar } from "~/components/Styles";
+import {
+  Apps,
+  AppCard,
+  AppDetails,
+  AppLinks,
+} from "~/components/PageStyles/projects/style";
+import { Container, HorizontalBar } from "~/components/PageStyles/common/style";
 
 type ProjectsAPI = {
   fork: boolean;

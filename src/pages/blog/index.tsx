@@ -2,8 +2,8 @@ import Link from "next/link";
 import { format } from "timeago.js";
 import { InferGetStaticPropsType } from "next";
 import { getAllPosts } from "~/helpers/api";
-import { Container, HorizontalBar } from "~/components/Styles";
-import { Hero, Posts, PostExcerpt } from "./style";
+import { Container, HorizontalBar } from "~/components/PageStyles/common/style";
+import { Hero, Posts, PostExcerpt } from "~/components/PageStyles/blog/style";
 import Layout from "~/components/Layout";
 
 // TODO: Add types to posts.

@@ -1,7 +1,12 @@
 /* eslint-disable react/no-array-index-key */
 import Layout from "~/components/Layout";
-import { Container } from "~/components/Styles";
-import { Hero, AboutMe, ImageContainer, Skills } from "./style";
+import { Container } from "~/components/PageStyles/common/style";
+import {
+  Hero,
+  AboutMe,
+  ImageContainer,
+  Skills,
+} from "~/components/PageStyles/about/style";
 
 export default function About() {
   const skills = [
