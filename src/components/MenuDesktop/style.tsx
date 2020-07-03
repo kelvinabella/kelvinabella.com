@@ -15,7 +15,7 @@ export const LinkWrapper = styled.span<{ isActive: boolean }>`
     padding: 8px 32px;
     border-radius: 4px;
     background: ${props => (props.isActive ? "rgba(0,122,255, 0.1)" : "none")};
-    color: ${props => (props.isActive ? "#007AFF" : "#050505")};
+    color: ${props => (props.isActive ? "#006be0" : "#050505")};
   }
   a:hover {
     color: #007aff;

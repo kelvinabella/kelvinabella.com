@@ -44,6 +44,7 @@ export default function DarkModeIcon() {
     <IconContainer>
       <AnimatedSpan
         style={svgSpring}
+        aria-label="Dark Mode"
         role="button"
         tabIndex={0}
         onClick={() => toggleDarkMode(!isDarkMode)}

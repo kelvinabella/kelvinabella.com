@@ -36,7 +36,7 @@ export default function Logo() {
   return (
     <LogoContainer>
       <Link href="/">
-        <a onMouseEnter={() => animate()}>
+        <a aria-label="Kelvs" onMouseEnter={() => animate()}>
           <LogoSVG />
         </a>
       </Link>

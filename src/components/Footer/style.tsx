@@ -8,10 +8,10 @@ const FooterContainer = styled.footer`
   min-height: 3em;
   font-size: 12px;
   text-align: center;
-  color: #999;
+  color: #000;
   a {
     text-decoration: underline;
-    color: #8ccbff;
+    color: #fe6056;
   }
   ${({ theme }) => theme.thone`font-size: 0.7em;`}
 `;

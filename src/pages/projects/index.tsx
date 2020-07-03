@@ -85,6 +85,7 @@ export default function Projects({
                       target="_blank"
                       rel="noopener noreferrer"
                       href={app.homepage}
+                      aria-label="Open Link"
                     >
                       <OpenLinkSVG />
                     </a>
@@ -94,6 +95,7 @@ export default function Projects({
                       target="_blank"
                       rel="noopener noreferrer"
                       href={app.githubUrl}
+                      aria-label="Github"
                     >
                       <GithubSVG />
                     </a>

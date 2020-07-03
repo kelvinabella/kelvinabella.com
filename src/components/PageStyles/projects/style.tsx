@@ -26,7 +26,7 @@ export const AppCard = styled.div`
   a {
     padding: 0 5px;
     svg {
-      height: 1rem;
+      height: 1.5rem;
       fill: #a0aec0;
     }
   }
@@ -69,6 +69,7 @@ export const AppDetails = styled.div`
 export const AppLinks = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
   div {
     margin-top: 0;
   }

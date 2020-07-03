@@ -1,6 +1,6 @@
 const site = {
   title: "Kelvin Abella",
-  image: "",
+  image: "https://kelvs.me/images/site-image.png",
   description:
     "Kelvin Abella is a software engineer based in Abu Dhabi, UAE who builds websites, applications.",
   keywords:
