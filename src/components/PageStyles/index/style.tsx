@@ -6,7 +6,8 @@ export const HeroWrapper = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   min-height: 40vh;
-  ${({ theme }) => theme.tablet`justify-content: center;`}
+  margin-top: 5em;
+  ${({ theme }) => theme.tablet`justify-content: center;margin-top: 0;`}
 `;
 
 // TODO: put a div in the hero that can be tilted like in react spring

@@ -14,6 +14,13 @@ const FooterContainer = styled.footer`
     color: #232946;
   }
   ${({ theme }) => theme.thone`font-size: 0.7em;`}
+
+  .dark-mode & div {
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
 `;
 
 export default FooterContainer;
