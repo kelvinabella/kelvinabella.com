@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Document, {
   DocumentContext,
   Html,
@@ -9,6 +10,7 @@ import { ServerStyleSheet } from "styled-components";
 import Terser from "terser";
 import mem from "mem";
 import code from "~/helpers/noflash";
+import config from "~/helpers/config";
 
 const minify = mem(Terser.minify);
 // https://github.com/kachkaev/njt/commit/1ef3bb026b006a355173c8a55594de65de53c102
@@ -56,7 +58,25 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" itemScope itemType="https://schema.org/Article">
-        <Head />
+        <Head>
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${config.googleAnalyticsID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+        </Head>
         <body>
           <noscript>
             For full functionality of this page it is necessary to enable
