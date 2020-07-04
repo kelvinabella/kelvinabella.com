@@ -93,6 +93,9 @@ export const AboutMe = styled.div`
     h1{
       text-align: center;
     }
+    p{
+      font-size: 0.9rem;
+    }
   `}
 `;
 

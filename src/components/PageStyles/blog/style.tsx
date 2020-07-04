@@ -35,13 +35,17 @@ export const PostExcerpt = styled.div`
   p {
     margin: 5px 0;
     font-size: 1.15em;
-    ${({ theme }) => theme.tablet`font-size: 1em;`}
   }
 
   span {
     font-size: 0.8rem;
     color: #686b78;
   }
+  ${({ theme }) => theme.tablet`
+    p {
+      font-size: 0.90em;
+    };
+  `}
 `;
 
 export const PostContainer = styled.div`
@@ -53,4 +57,8 @@ export const PostContainer = styled.div`
     font-weight: 800;
     margin-bottom: 1em;
   }
+  ${({ theme }) => theme.tablet`
+  p{
+    font-size: 0.90em;
+  `}
 `;

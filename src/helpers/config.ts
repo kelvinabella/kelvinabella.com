@@ -2,7 +2,7 @@ const site = {
   title: "Kelvin Abella",
   image: "https://kelvs.me/images/site-image.png",
   description:
-    "Kelvin Abella is a software engineer based in Abu Dhabi, UAE who builds websites, applications.",
+    "Kelvin Abella is a software engineer based in Abu Dhabi, UAE who builds websites, and web applications.",
   keywords:
     "Kelvin Abella, Kelvin, software engineer, front-end engineer, web developer, javascript, reactjs, nextjs, vuejs",
   url: "https://kelvs.me/",

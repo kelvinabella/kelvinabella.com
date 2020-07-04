@@ -10,6 +10,7 @@ export const Container = styled.section`
   max-width: 868px;
   width: auto;
   margin: 0 auto;
+  height: 100%;
   min-height: calc(100vh - 7rem);
   ${({ theme }) => theme.desktop`margin: 3em; max-width: 100%;`}
   ${({ theme }) => theme.tablet`margin: 3em 1em;`}

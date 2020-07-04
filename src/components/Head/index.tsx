@@ -61,6 +61,10 @@ const MainHead = ({ siteTitle = config.title }: { siteTitle?: string }) => (
     <meta itemProp="description" content={config.description} />
     <meta itemProp="image" content={config.image} />
 
+    <meta
+      name="issues"
+      content="Hey fellow geek. Found some issues. File it on https://github.com/kelvinabella/kelvs.me/issues."
+    />
     {/* TODO: Add adidtional missing tags and image. */}
   </Head>
 );

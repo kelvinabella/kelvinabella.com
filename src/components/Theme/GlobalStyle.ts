@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     scroll-behavior: smooth;
   }
   body {
-    margin: 0;
+    margin: 0; 
+    height: 100%;
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
