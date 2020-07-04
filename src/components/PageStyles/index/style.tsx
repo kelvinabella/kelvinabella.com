@@ -195,7 +195,7 @@ export const AppBox = styled.div`
   ${({ theme }) => theme.thone`width: 100%;`}
 `;
 
-export const H2 = styled.h1`
+export const H1 = styled.h1`
   margin: 2.5em 0;
   ${({ theme }) => theme.tablet`
     margin: 2em 0;

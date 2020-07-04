@@ -29,12 +29,11 @@ export const PostExcerpt = styled.div`
   margin-top: 0.75em;
   a {
     font-weight: 700;
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 
   p {
     margin: 5px 0;
-    font-size: 1.15em;
   }
 
   span {

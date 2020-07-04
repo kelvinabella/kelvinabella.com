@@ -13,7 +13,7 @@ import {
   Contact,
   FeaturedProjects,
   AppBox,
-  H2,
+  H1,
 } from "~/components/PageStyles/index/style";
 
 // https://www.justinewargnier.com/
@@ -84,7 +84,7 @@ export default function Home() {
           </Contact>
         </HeroWrapper>
         <HorizontalBar />
-        <H2>Featured Projects</H2>
+        <H1>Featured Projects</H1>
         <FeaturedProjects>
           {featuredProject.map(featured => (
             <AppBox key={featured.name}>
