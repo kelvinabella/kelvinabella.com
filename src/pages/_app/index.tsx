@@ -39,7 +39,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       Router.events.off("routeChangeStart", hideLoader);
       Router.events.off("routeChangeComplete", () => handleRouteChange);
     };
-  }, []);
+  }, [isShowLoader, style]);
 
   return (
     <Theme>

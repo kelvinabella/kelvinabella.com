@@ -12,51 +12,10 @@ import {
   AppLinks,
 } from "~/components/PageStyles/projects/style";
 import { Container, HorizontalBar } from "~/components/PageStyles/common/style";
-
-type ProjectsAPI = {
-  fork: boolean;
-  name: string;
-  html_url: string;
-  homepage: string;
-  description: string;
-};
-
-type ProjectsUI = {
-  name: string;
-  githubUrl: string;
-  homepage: string;
-  technology: string;
-  description: string;
-};
+import { getLatestProjects } from "~/helpers/api";
 
 export const getStaticProps = async () => {
-  let latestProjects: ProjectsUI[] = [];
-  try {
-    const res = await fetch(
-      "https://api.github.com/users/kelvinabella/repos?sort=created&direction=desc&type=owner"
-    );
-    const projects: ProjectsAPI[] = await res.json();
-    latestProjects = projects
-      .filter(project => project.fork === false)
-      .map((project: any) => {
-        let description: string[] = [];
-        if (project.description) {
-          description = project.description.split(
-            " This project is built using "
-          );
-        }
-        return {
-          name: project.name,
-          githubUrl: project.html_url,
-          homepage: project.homepage,
-          technology: description[1] || "",
-          description: description[0] || "",
-        };
-      });
-  } catch (error) {
-    // do nothing
-  }
-
+  const latestProjects = await getLatestProjects();
   return {
     props: {
       latestProjects,

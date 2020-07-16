@@ -2,8 +2,6 @@ import Head from "next/head";
 import config from "~/helpers/config";
 
 // https://github.com/joshbuchea/HEAD
-// TODO: Check this warning
-// eslint-disable-next-line react/require-default-props
 const MainHead = ({ siteTitle = config.title }: { siteTitle?: string }) => (
   <Head>
     <meta charSet="utf-8" />
@@ -68,5 +66,9 @@ const MainHead = ({ siteTitle = config.title }: { siteTitle?: string }) => (
     {/* TODO: Add adidtional missing tags and image. */}
   </Head>
 );
+
+MainHead.defaultProps = {
+  siteTitle: config.title,
+};
 
 export default MainHead;

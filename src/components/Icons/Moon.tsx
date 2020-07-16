@@ -2,6 +2,7 @@ import React from "react";
 
 const Moon = () => (
   <svg
+    className="moon"
     height="640pt"
     viewBox="-12 0 448 448.04455"
     width="448pt"

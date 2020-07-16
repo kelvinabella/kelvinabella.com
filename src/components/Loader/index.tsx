@@ -1,37 +1,11 @@
 import { useState, useEffect } from "react";
-import anime from "animejs";
 import LoaderSVG from "~/components/Icons/Loader";
-import { useScrollDisabler } from "~/helpers/index";
+import { useScrollDisabler, animate } from "~/helpers/index";
 import { LoaderContainer, LogoWrapper } from "./style";
 
 type Props = { hideLoader: () => void };
 
 export default function Loader({ hideLoader }: Props) {
-  const animate = () => {
-    const animateLoader = anime.timeline({
-      easing: "easeInOutCubic",
-      duration: 1500,
-      complete: () => {
-        hideLoader();
-      },
-    });
-
-    animateLoader
-      .add({
-        targets: ".loader rect",
-        direction: "alternate",
-        strokeDashoffset: [anime.setDashoffset, 0],
-      })
-      .add(
-        {
-          targets: ".loader path",
-          direction: "alternate",
-          strokeDashoffset: [anime.setDashoffset, 0],
-        },
-        400
-      );
-  };
-
   const [isMounted, setIsMounted] = useState(false);
 
   useScrollDisabler(true);
@@ -39,11 +13,20 @@ export default function Loader({ hideLoader }: Props) {
   useEffect(() => {
     // To avoid flickering of SVG.
     const timeout = setTimeout(() => setIsMounted(true), 10);
-    animate();
+    animate(
+      () => null,
+      hideLoader,
+      [
+        { target: ".loader rect", offset: 0 },
+        { target: ".loader path", offset: 400 },
+      ],
+      false,
+      1500
+    );
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [hideLoader]);
 
   return (
     <LoaderContainer>

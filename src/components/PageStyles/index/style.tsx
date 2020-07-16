@@ -7,7 +7,8 @@ export const HeroWrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 7rem);
-  margin-top: 3em;
+  margin: 3em 0;
+  ${({ theme }) => theme.bigDesktop`margin-bottom: 0;`}
   ${({ theme }) => theme.desktop`
     justify-content: center;
     margin-bottom: 0;
@@ -174,7 +175,7 @@ export const AppBox = styled.div`
   }
   span {
     margin-right: 3px;
-    background-color: #ff4e4e;
+    background-color: #232946;
     color: #fff;
     padding: 0 3px 1px 3px;
     line-height: normal;

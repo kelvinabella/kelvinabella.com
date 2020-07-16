@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders Footer correctly 1`] = `
+<DocumentFragment>
+  <footer
+    class="style__FooterContainer-sc-1egeub5-0 jrWLre"
+  >
+    <div>
+      <span>
+        powered by 
+        <a
+          href="https://nextjs.org"
+        >
+          Next.js
+        </a>
+         and 
+        <a
+          href="https://reactjs.org"
+        >
+          React
+        </a>
+      </span>
+      <span>
+         | built by 
+        <a
+          href="https://kelvs.me"
+        >
+          Kelvin Abella
+        </a>
+         with ♥
+      </span>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

@@ -73,9 +73,7 @@ export default function About() {
             {skills.map((skill, key) => (
               <span key={key}>
                 <img
-                  src={`https://img.shields.io/badge/-${skill.name}-${
-                    skill.color || "1AA6E4"
-                  }.svg?logo=${skill.name}&style=flat&logoColor=fff`}
+                  src={`https://img.shields.io/badge/-${skill.name}-${skill.color}.svg?logo=${skill.name}&style=flat&logoColor=fff`}
                   alt={skill.name}
                 />
               </span>

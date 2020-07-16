@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer styles renders FooterContainer correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-height: 3em;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
+
+.c0 a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #232946;
+}
+
+.dark-mode .c0 div {
+  color: #fff;
+}
+
+.dark-mode .c0 div a {
+  color: #fff;
+}
+
+@media (max-width:640px) {
+  .c0 {
+    font-size: 0.7em;
+  }
+}
+
+<footer
+  class="c0"
+/>
+`;

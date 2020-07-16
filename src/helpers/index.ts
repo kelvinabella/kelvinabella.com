@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import anime from "animejs";
 
 // https://github.com/bchiang7/v4/blob/master/src/utils/index.js
 export const hex2rgba = (hex: string, alpha = 1): string => {
@@ -62,4 +63,32 @@ export const useLoaded = () => {
   const [loaded, setLoaded] = useState(false);
   useEffect(() => setLoaded(true), []);
   return loaded;
+};
+
+export const animate = (
+  begin: () => void,
+  complete: () => void,
+  loaders: Array<{ target: string; offset: number }>,
+  isFinished: boolean,
+  duration: number
+) => {
+  if (isFinished) return;
+
+  const animateLoader = anime.timeline({
+    easing: "easeInOutCubic",
+    duration,
+    begin,
+    complete,
+  });
+
+  for (let i = 0; i < loaders.length; i += 1) {
+    animateLoader.add(
+      {
+        targets: loaders[i].target,
+        direction: "alternate",
+        strokeDashoffset: [anime.setDashoffset, 0],
+      },
+      loaders[i].offset
+    );
+  }
 };
