@@ -15,7 +15,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const { data, content } = matter(fileContents);
 
   type Items = {
-    [key: string]: string | Record<string, unknown>;
+    [key: string]: string;
   };
 
   const items: Items = {};

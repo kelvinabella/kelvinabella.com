@@ -40,10 +40,7 @@ describe("Blog page", () => {
               date: "2020-06-28T00:17:07.322Z",
               slug: "hello-world",
               tags: "blogging, random",
-              author: {
-                name: "Kelvin Abella",
-                picture: "/assets/blog/authors/kelvs.jpg",
-              },
+              author: "Kelvin Abella",
               coverImage: "/assets/blog/hello-world/cover.jpg",
               excerpt: "This is my first post on this site.",
             },
