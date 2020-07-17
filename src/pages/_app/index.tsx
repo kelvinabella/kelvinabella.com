@@ -2,12 +2,18 @@
 import { useState, useEffect } from "react";
 import { AppProps } from "next/app";
 import Router from "next/router";
+import * as Sentry from "@sentry/node";
 import Loader from "~/components/Loader";
 import Theme from "~/components/Theme";
 import * as gtag from "~/helpers/gtag";
 
+Sentry.init({
+  enabled: process.env.NODE_ENV === "production",
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+});
+
 // https://www.typescriptlang.org/docs/handbook/jsx.html#the-jsx-result-type
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, err }: AppProps & { err: any }) => {
   const [isShowLoader, setShowLoader] = useState(true);
   const hideLoader = () => setShowLoader(false);
   const style = [
@@ -45,7 +51,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Theme>
       {/* remove scroll when loading */}
       {isShowLoader && <Loader hideLoader={hideLoader} />}
-      <Component {...pageProps} />
+      <Component {...pageProps} err={err} />
     </Theme>
   );
 };
