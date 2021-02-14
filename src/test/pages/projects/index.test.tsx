@@ -6,9 +6,9 @@ jest.mock("~/helpers/api", () => ({
   getLatestProjects: () =>
     Promise.resolve([
       {
-        name: "kelvs.me",
-        githubUrl: "https://kelvs.me",
-        homepage: "https://kelvs.me",
+        name: "kelvinabella.com",
+        githubUrl: "https://kelvinabella.com",
+        homepage: "https://kelvinabella.com",
         technology: "react",
         description: "description",
       },
@@ -32,9 +32,9 @@ describe("Projects page", () => {
         <Projects
           latestProjects={[
             {
-              name: "kelvs.me",
-              githubUrl: "https://kelvs.me",
-              homepage: "https://kelvs.me",
+              name: "kelvinabella.com",
+              githubUrl: "https://kelvinabella.com",
+              homepage: "https://kelvinabella.com",
               technology: "react",
               description: "description",
             },
@@ -52,9 +52,9 @@ describe("Projects page", () => {
     expect(props).toEqual({
       latestProjects: [
         {
-          name: "kelvs.me",
-          githubUrl: "https://kelvs.me",
-          homepage: "https://kelvs.me",
+          name: "kelvinabella.com",
+          githubUrl: "https://kelvinabella.com",
+          homepage: "https://kelvinabella.com",
           technology: "react",
           description: "description",
         },

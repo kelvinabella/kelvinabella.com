@@ -1,4 +1,4 @@
-# My personal portfolio hosted at kelvs.me
+# My personal portfolio hosted at kelvinabella.com
 
 This project is built using Next.js with TypeScript and Styled Components.
 
@@ -9,8 +9,8 @@ This project is built using Next.js with TypeScript and Styled Components.
 Download the example:
 
 ```bash
-git clone https://github.com/kelvinabella/kelvs.me.git
-cd kelvs.me
+git clone https://github.com/kelvinabella/kelvinabella.com.git
+cd kelvinabella.com
 ```
 
 Install it and run:

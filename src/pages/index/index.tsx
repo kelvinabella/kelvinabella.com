@@ -22,10 +22,10 @@ import {
 export default function Home() {
   const featuredProject = [
     {
-      name: "kelvs.me",
-      url: "https://kelvs.me",
-      imgAlt: "kelvs.me",
-      imgUrl: "/images/projects/kelvs.me.png",
+      name: "kelvinabella.com",
+      url: "https://kelvinabella.com",
+      imgAlt: "kelvinabella.com",
+      imgUrl: "/images/projects/kelvinabella.com.png",
       tags: ["React", "Next"],
       description: "This is my latest portfolio built with next and react.",
     },

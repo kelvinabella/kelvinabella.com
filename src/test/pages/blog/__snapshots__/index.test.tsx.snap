@@ -302,7 +302,7 @@ exports[`Blog page renders Blog correctly 1`] = `
       <span>
          | built by 
         <a
-          href="https://kelvs.me"
+          href="https://kelvinabella.com"
         >
           Kelvin Abella
         </a>
@@ -633,7 +633,7 @@ exports[`Blog page renders Blog correctly 2`] = `
       <span>
          | built by 
         <a
-          href="https://kelvs.me"
+          href="https://kelvinabella.com"
         >
           Kelvin Abella
         </a>

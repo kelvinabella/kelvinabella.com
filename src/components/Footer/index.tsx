@@ -12,7 +12,7 @@ export default function Footer() {
         </span>
         <span>
           &nbsp;|&nbsp;built by&nbsp;
-          <a href="https://kelvs.me">Kelvin Abella</a>
+          <a href="https://kelvinabella.com">Kelvin Abella</a>
           &nbsp;with &hearts;
         </span>
       </div>

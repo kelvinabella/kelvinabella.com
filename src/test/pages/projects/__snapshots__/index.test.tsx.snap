@@ -295,7 +295,7 @@ exports[`Projects page renders Projects correctly 1`] = `
       <span>
          | built by 
         <a
-          href="https://kelvs.me"
+          href="https://kelvinabella.com"
         >
           Kelvin Abella
         </a>
@@ -591,7 +591,7 @@ exports[`Projects page renders Projects correctly 2`] = `
           <span>
             <a
               aria-label="Open Link"
-              href="https://kelvs.me"
+              href="https://kelvinabella.com"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -615,7 +615,7 @@ exports[`Projects page renders Projects correctly 2`] = `
             </a>
             <a
               aria-label="Github"
-              href="https://kelvs.me"
+              href="https://kelvinabella.com"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -638,7 +638,7 @@ exports[`Projects page renders Projects correctly 2`] = `
           class="style__AppDetails-xfidxt-2 lfHxmc"
         >
           <h2>
-            kelvs.me
+            kelvinabella.com
           </h2>
           <span>
             react
@@ -671,7 +671,7 @@ exports[`Projects page renders Projects correctly 2`] = `
       <span>
          | built by 
         <a
-          href="https://kelvs.me"
+          href="https://kelvinabella.com"
         >
           Kelvin Abella
         </a>

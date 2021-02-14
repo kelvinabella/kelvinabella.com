@@ -377,19 +377,19 @@ exports[`Home page renders Home correctly 1`] = `
         class="style__AppBox-pybljp-6 cbEkGf"
       >
         <a
-          aria-label="kelvs.me"
-          href="https://kelvs.me"
+          aria-label="kelvinabella.com"
+          href="https://kelvinabella.com"
           rel="noopener noreferrer"
           target="_blank"
         >
           <img
-            alt="kelvs.me"
-            src="/images/projects/kelvs.me.png"
+            alt="kelvinabella.com"
+            src="/images/projects/kelvinabella.com.png"
           />
         </a>
         <div>
           <h2>
-            kelvs.me
+            kelvinabella.com
           </h2>
           <span>
             React
@@ -492,7 +492,7 @@ exports[`Home page renders Home correctly 1`] = `
       <span>
          | built by 
         <a
-          href="https://kelvs.me"
+          href="https://kelvinabella.com"
         >
           Kelvin Abella
         </a>
