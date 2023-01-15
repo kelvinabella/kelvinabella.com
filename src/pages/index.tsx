@@ -3,39 +3,101 @@ import GmailSVG from "components/icons/Gmail";
 import GithubSVG from "components/icons/Github";
 import LinkedinSVG from "components/icons/LinkedIn";
 import Link from "next/link";
-import { Caveat } from "@next/font/google";
 import clsx from "clsx";
+import { Caveat } from "@next/font/google";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import Balancer from "react-wrap-balancer";
 
-const caveat = Caveat({ subsets: ['latin'] });
+const caveat = Caveat({ subsets: ["latin"] });
+
+const texts = ["JavaScript", "TypeScript", "React"];
+const variants = {
+  enter: {
+    translateY: 20,
+    opacity: 0,
+    height: 0,
+  },
+  center: {
+    zIndex: 1,
+    translateY: 0,
+    opacity: 1,
+    height: "auto",
+  },
+  exit: {
+    zIndex: 0,
+    translateY: -20,
+    opacity: 0,
+    height: 0,
+  },
+};
 
 export default function Home() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      let next = index + 1;
+      if (next === texts.length) {
+        next = 0;
+      }
+      setIndex(next);
+    }, 3 * 1000);
+  }, [index, setIndex]);
+
   return (
     <Layout>
-      <section className="h-[100vh] flex flex-col items-center justify-start content-center flex-wrap max-w-4xl mx-auto">
-        <div className="h-full flex flex-col justify-center items-center">
-          <div className={clsx(["flex items-center flex-col justify-start", caveat.className])}>
-            <h1 className="inline-block overflow-visible w-full flex-grow-0 text-7xl text-center font-medium">
-              Hello, my name is <span className="font-bold">Kelvin.</span>
-            </h1>
-            <div className="w-1/4 relative inline-block h-1 my-3 p-0 border-b-4 border-b-orange-700 " />
+      <section className="mx-auto flex h-[100vh] flex-col items-center justify-center">
+        <div className={clsx(["w-full", caveat.className])}>
+          <h1 className="w-full flex-grow-0 overflow-visible text-center text-7xl font-medium leading-normal">
+            Hello, my name is&nbsp;
+            <span className="bg-gradient-to-r from-rose-300 via-fuchsia-500 to-indigo-300 bg-[length:100%_3px] bg-bottom bg-no-repeat font-bold">
+              Kelvin.
+            </span>
+          </h1>
+        </div>
+        <h2 className="relative text-center text-4xl">
+          <span>
+            I&apos;m a front-end engineer. I build web application using
+          </span>
+          <br />
+          <div className="relative inline w-full overflow-hidden">
+            <AnimatePresence initial={false}>
+              <motion.span
+                style={{ position: "absolute" }}
+                layout
+                variants={variants}
+                key={index}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  y: { type: "spring", stiffness: 1000, damping: 200 },
+                  opacity: { duration: 0.5 },
+                }}
+              >
+                {texts[index]}
+              </motion.span>
+            </AnimatePresence>
           </div>
-          <div>
-            <h1 className="relative text-6xl text-center">I&apos;m a front-end engineer</h1>
-          </div>
-          <div className="my-16 text-sm">
-            <Link href="/about">Learn more about me</Link>
-          </div>
-          <div className="flex w-1/5 justify-around">
-            <a aria-label="Github" href="https://github.com/kelvinabella">
-              <GithubSVG />
-            </a>
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/kelvinabella">
-              <LinkedinSVG />
-            </a>
-            <a aria-label="Email To" href="mailto:abellakelvin.ka@gmail.com">
-              <GmailSVG />
-            </a>
-          </div>
+        </h2>
+
+        <div className="my-16 text-sm">
+          <Link href="/about">Learn more about me</Link>
+        </div>
+        <div className="flex w-1/5 justify-around">
+          <a aria-label="Github" href="https://github.com/kelvinabella">
+            <GithubSVG />
+          </a>
+          <a
+            aria-label="LinkedIn"
+            href="https://www.linkedin.com/in/kelvinabella"
+          >
+            <LinkedinSVG />
+          </a>
+          <a aria-label="Email To" href="mailto:abellakelvin.ka@gmail.com">
+            <GmailSVG />
+          </a>
         </div>
       </section>
     </Layout>
