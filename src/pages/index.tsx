@@ -56,32 +56,35 @@ export default function Home() {
             </span>
           </h1>
         </div>
-        <h2 className="relative text-center text-4xl">
-          <span>
-            I&apos;m a front-end engineer. I build web application using
-          </span>
-          <br />
-          <div className="relative inline w-full overflow-hidden">
-            <AnimatePresence initial={false}>
-              <motion.span
-                style={{ position: "absolute" }}
-                layout
-                variants={variants}
-                key={index}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  y: { type: "spring", stiffness: 1000, damping: 200 },
-                  opacity: { duration: 0.5 },
-                }}
-              >
-                {texts[index]}
-              </motion.span>
-            </AnimatePresence>
-          </div>
-        </h2>
-
+        <div className="mx-auto w-8/12">
+          <h2 className="text-center mx-auto text-5xl">
+            <span>I&apos;m a front-end engineer.</span>
+          </h2>
+        </div>
+        <div className="mx-auto w-3/5">
+          <h2 className="relative mx-auto text-5xl">
+            <span>I build web application using&nbsp;</span>
+            <div className="relative inline w-full overflow-hidden">
+              <AnimatePresence initial={false}>
+                <motion.span
+                  style={{ position: "absolute" }}
+                  layout
+                  variants={variants}
+                  key={index}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    y: { type: "spring", stiffness: 1000, damping: 200 },
+                    opacity: { duration: 0.5 },
+                  }}
+                >
+                  {texts[index]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
+          </h2>
+        </div>
         <div className="my-16 text-sm">
           <Link href="/about">Learn more about me</Link>
         </div>
