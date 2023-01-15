@@ -2,7 +2,7 @@ import React from "react";
 
 const Sun = () => (
   <svg
-    className="sun"
+    className="sun h-5 w-5"
     height="480pt"
     viewBox="0 0 480 480"
     width="480pt"
