@@ -4,7 +4,7 @@ type Props = {}
 
 export default function Footer({}: Props) {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 flex justify-center items-center flex-wrap h-12 text-xs text-center ">
+    <footer className="dark:text-white fixed bottom-0 left-0 right-0 flex h-12 flex-wrap items-center justify-center text-center text-xs ">
       <span>
         powered by&nbsp;
         <a href="https://nextjs.org">Next.js</a>
